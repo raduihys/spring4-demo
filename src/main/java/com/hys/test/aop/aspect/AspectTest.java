@@ -13,38 +13,38 @@ public class AspectTest {
 
     @Around("execution( void showPeople*())")
     public Object executionTest1(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("executionTest1:"+pjp.getSignature());
+    	TestLog.printAopTest("executionTest1:"+pjp.getSignature());
     	return pjp.proceed();
     }
     
     @Around("within(com.hys.test..*)")
     public Object withinTest1(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("withinTest1:"+pjp.getSignature());
+    	TestLog.printAopTest("withinTest1:"+pjp.getSignature());
     	return pjp.proceed();
     }
 
     
     @Around("@within(com.hys.test.aop.annotation.MyComponent)")
     public Object withinTest2(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("withinTest2:"+pjp.getSignature());
+    	TestLog.printAopTest("withinTest2:"+pjp.getSignature());
     	return pjp.proceed();
     }
     
     
     @Around("this(com.hys.test.service.PeopleService)")
     public Object thisTest1(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("thisTest1:"+pjp.getSignature());
+    	TestLog.printAopTest("thisTest1:"+pjp.getSignature());
     	return pjp.proceed();
     }
     
     @Around("target(com.hys.test.service.PeopleService)")
     public Object targetTest1(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("targetTest1:"+pjp.getSignature());
+    	TestLog.printAopTest("targetTest1:"+pjp.getSignature());
     	return pjp.proceed();
     }
     @Around("@annotation(com.hys.test.aop.annotation.TestAnnotation)")
     public Object annotationTest1(ProceedingJoinPoint pjp) throws Throwable {
-    	TestLog.println("annotationTest1:"+pjp.getSignature());
+    	TestLog.printAopTest("annotationTest1:"+pjp.getSignature());
     	return pjp.proceed();
     }
 

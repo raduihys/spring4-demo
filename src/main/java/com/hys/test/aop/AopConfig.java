@@ -3,7 +3,7 @@ package com.hys.test.aop;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-//@Configuration
+@Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AopConfig {
 
