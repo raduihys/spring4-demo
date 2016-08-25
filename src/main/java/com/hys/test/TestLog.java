@@ -4,7 +4,7 @@ public class TestLog {
 	private static void println(Object str) {
 		System.out.println(str);
 	}
-	public static void printlnRootLog(Object str) {
+	public static void printRootLog(Object str) {
 		println("【RootLog】:"+str);
 	}
 
@@ -18,10 +18,10 @@ public class TestLog {
 
 	}
 
-	public static void printAopTest(String str) {
+	public static void printAopLog(String str) {
 //		println("【AopLog】:"+str);
 	}
-	public static void printAsynTest(String str) {
+	public static void printAsynLog(String str) {
 		println("【AsynLog】:"+str);
 	}
 	

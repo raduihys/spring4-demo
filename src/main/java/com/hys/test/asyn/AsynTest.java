@@ -9,6 +9,6 @@ import com.hys.test.TestLog;
 public class AsynTest {
 	@Async("myExecutor")
 	public void asynMethod1() {
-		TestLog.printAsynTest("asynMethod1");
+		TestLog.printAsynLog("asynMethod1");
 	}
 }

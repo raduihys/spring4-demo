@@ -10,8 +10,8 @@ public class SpringInit {
 	public static void main(String[] args) throws Exception {
 		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CoreConfig.class)) {
 			SpringEvtDispatcher.publishEvt(new TestEvt1("evt_content1"));
-			TestLog.printlnRootLog("main函数结束");
 			ctx.getBean(AsynTest.class).asynMethod1();
+			TestLog.printRootLog("main函数结束");
 			
 		}
 	}
