@@ -7,7 +7,7 @@ import com.hys.test.TestLog;
 
 @Component
 public class AsynTest {
-	@Async("myExecutor")
+	@Async
 	public void asynMethod1() {
 		TestLog.printAsynLog("asynMethod1");
 	}
