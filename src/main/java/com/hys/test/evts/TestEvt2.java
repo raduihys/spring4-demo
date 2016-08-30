@@ -1,6 +1,6 @@
 package com.hys.test.evts;
 
-import com.hys.test.tmp.SpringEvt;
+import com.hys.test.component.springevt.SpringEvt;
 
 public class TestEvt2 extends SpringEvt {
 	private static final long serialVersionUID = 1L;

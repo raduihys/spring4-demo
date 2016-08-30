@@ -3,9 +3,9 @@ package com.hys.test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.hys.test.asyn.AsynTest;
+import com.hys.test.component.springevt.SpringEvtDispatcher;
 import com.hys.test.evts.TestEvt1;
 import com.hys.test.evts.TestEvt2;
-import com.hys.test.tmp.SpringEvtDispatcher;
 
 public class SpringInit {
 	public static void main(String[] args) throws Exception {

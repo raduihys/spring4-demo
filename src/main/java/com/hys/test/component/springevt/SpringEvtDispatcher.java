@@ -1,4 +1,4 @@
-package com.hys.test.tmp;
+package com.hys.test.component.springevt;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

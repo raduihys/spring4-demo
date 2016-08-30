@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.hys.test.TestLog;
-import com.hys.test.tmp.SpringEvt;
+import com.hys.test.component.springevt.SpringEvt;
 
 @Component
 public class EvtListeners {
