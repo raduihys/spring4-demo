@@ -9,7 +9,7 @@ public class TestLog {
 	}
 
 	public static void printInitLog(String str) {
-		println("【InitLog】:"+str);
+//		println("【InitLog】:"+str);
 
 	}
 
@@ -22,7 +22,7 @@ public class TestLog {
 //		println("【AopLog】:"+str);
 	}
 	public static void printAsynLog(String str) {
-		println("【AsynLog】:"+str);
+//		println("【AsynLog】:"+str);
 	}
 	
 }
