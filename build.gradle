@@ -1,8 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
+
 group = 'com.baitian.fourb.demons'
-version = '1.0'
+version = '2.0-LOCAL' //SNAPSHOT,LOCAL
 
 description = """"""
 
@@ -26,4 +27,43 @@ dependencies {
     compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.8.5'
     compile group: 'org.springframework', name: 'spring-context-support', version:springVersion
     compile group: 'org.springframework', name: 'spring-tx', version:springVersion
+}
+
+///发布maven  gradle -q publish --stacktrace
+apply plugin: 'maven-publish'
+task sourceJar(type: Jar) {
+  from sourceSets.main.allJava
+  classifier "sources"
+}
+publishing {
+ 	repositories {
+        maven {
+			def isSnapShot=false,isLocal=false;
+			if(version.endsWith("SNAPSHOT")){
+				isSnapShot=true;
+			}else if(version.endsWith("LOCAL")){
+				version=version.substring(0,version.indexOf("LOCAL")-1)
+				isLocal=true;
+			}
+			if(isLocal){
+				url "$buildDir/repo"
+			}else{ 
+				credentials {
+				    username 'deployer'
+				    password 'fourbserver'
+				}
+				if(isSnapShot){
+					url "http://nexus.fourbdev.com/nexus/content/repositories/fourb-snapshot/"
+				}else{
+					url "http://nexus.fourbdev.com/nexus/content/repositories/fourb-release/"
+				}
+			}
+        }
+    }
+    publications {
+        hyspublish(MavenPublication) {
+            from components.java
+            artifact sourceJar //添加一个发布的artifact
+        }
+    }
 }
