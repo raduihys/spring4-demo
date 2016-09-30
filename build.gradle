@@ -3,7 +3,7 @@ apply plugin: 'maven'
 
 
 group = 'com.baitian.fourb.demons'
-version = '2.0-LOCAL' //SNAPSHOT,LOCAL
+version = '2.0-SNAPSHOT' //SNAPSHOT,LOCAL
 
 description = """"""
 
@@ -20,6 +20,7 @@ repositories {
 }
 ext {
 	springVersion='4.3.1.RELEASE'
+	junitVersion='4.12'
 }
 dependencies {
     compile group: 'org.springframework', name: 'spring-webmvc', version:springVersion
@@ -27,6 +28,8 @@ dependencies {
     compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.8.5'
     compile group: 'org.springframework', name: 'spring-context-support', version:springVersion
     compile group: 'org.springframework', name: 'spring-tx', version:springVersion
+	compile("org.springframework:spring-test:$springVersion")
+	compile("junit:junit:$junitVersion")
 }
 
 ///发布maven  gradle -q publish --stacktrace
