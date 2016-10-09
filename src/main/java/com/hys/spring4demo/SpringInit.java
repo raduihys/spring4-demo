@@ -15,6 +15,7 @@ public class SpringInit {
 			ctx.getBean(AsynTest.class).asynMethod1();
 			TestLog.printRootLog("main函数结束");
 			
+			
 		}
 	}
 }
