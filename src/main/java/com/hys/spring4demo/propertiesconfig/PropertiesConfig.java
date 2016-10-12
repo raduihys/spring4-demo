@@ -1,4 +1,4 @@
-package com.hys.spring4demo;
+package com.hys.spring4demo.propertiesconfig;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

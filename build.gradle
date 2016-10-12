@@ -21,9 +21,12 @@ repositories {
 ext {
 	springVersion='4.3.1.RELEASE'
 	junitVersion='4.12'
+	hessianVersion='4.0.38'
 }
 dependencies {
-    compile group: 'org.springframework', name: 'spring-webmvc', version:springVersion
+    compile("org.springframework:spring-webmvc:$springVersion")
+    compile("org.springframework:spring-web:$springVersion")
+    compile("com.caucho:hessian:$hessianVersion")
     compile group: 'org.aspectj', name: 'aspectjrt', version:'1.8.5'
     compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.8.5'
     compile group: 'org.springframework', name: 'spring-context-support', version:springVersion

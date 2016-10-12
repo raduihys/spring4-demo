@@ -6,6 +6,7 @@ import com.hys.spring4demo.asyn.AsynTest;
 import com.hys.spring4demo.component.springevt.SpringEvtDispatcher;
 import com.hys.spring4demo.evts.TestEvt1;
 import com.hys.spring4demo.evts.TestEvt2;
+import com.hys.spring4demo.hessian.HessianTest;
 
 public class SpringInit {
 	public static void main(String[] args) throws Exception {
@@ -15,6 +16,9 @@ public class SpringInit {
 			ctx.getBean(AsynTest.class).asynMethod1();
 			TestLog.printRootLog("main函数结束");
 			
+			
+			System.out.println(ctx.getBean(HessianTest.class).testHessianTestHello());
+
 			
 		}
 	}
