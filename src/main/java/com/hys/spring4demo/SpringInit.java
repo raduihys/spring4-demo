@@ -7,6 +7,7 @@ import com.hys.spring4demo.component.springevt.SpringEvtDispatcher;
 import com.hys.spring4demo.evts.TestEvt1;
 import com.hys.spring4demo.evts.TestEvt2;
 import com.hys.spring4demo.hessian.HessianTest;
+import com.hys.spring4demo.registrar.EnableTestMain;
 
 public class SpringInit {
 	public static void main(String[] args) throws Exception {
@@ -17,8 +18,7 @@ public class SpringInit {
 			TestLog.printRootLog("main函数结束");
 			
 			
-			System.out.println(ctx.getBean(HessianTest.class).testHessianTestHello());
-
+			ctx.getBean(EnableTestMain.class).t1();;
 			
 		}
 	}
