@@ -10,6 +10,9 @@ description = """"""
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+configurations.all {
+	resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
 
 sourceSets {
    main.java.srcDirs = ['src/main/java']
@@ -27,11 +30,12 @@ dependencies {
     compile("org.springframework:spring-webmvc:$springVersion")
     compile("org.springframework:spring-web:$springVersion")
     compile("com.caucho:hessian:$hessianVersion")
-    compile group: 'org.aspectj', name: 'aspectjrt', version:'1.8.5'
-    compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.8.5'
-    compile group: 'org.springframework', name: 'spring-context-support', version:springVersion
-    compile group: 'org.springframework', name: 'spring-tx', version:springVersion
+    compile("org.aspectj:aspectjrt:1.8.5")
+    compile("org.aspectj:aspectjweaver:1.8.5")
+    compile("org.springframework:spring-context-support:$springVersion")
+    compile("org.springframework:spring-tx:$springVersion")
 	compile("org.springframework:spring-test:$springVersion")
+	compile('com.bt.qq:qq-common:1.0-SNAPSHOT')
 	compile("junit:junit:$junitVersion")
 }
 

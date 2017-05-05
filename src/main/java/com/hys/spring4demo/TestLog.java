@@ -1,28 +1,59 @@
 package com.hys.spring4demo;
 
 public class TestLog {
+	private static boolean rootLogOn;
+	private static boolean initLogOn;
+	private static boolean evtLogOn;
+	private static boolean aopLogOn;
+	private static boolean asynLogOn;
+	
+	public static void setRootLogOn() {
+		TestLog.rootLogOn = true;
+	}
+	public static void setInitLogOn() {
+		TestLog.initLogOn = true;
+	}
+	public static void setEvtLogOn() {
+		TestLog.evtLogOn = true;
+	}
+	public static void setAopLogOn() {
+		TestLog.aopLogOn = true;
+	}
+	public static void setAsynLogOn() {
+		TestLog.asynLogOn = true;
+	}
 	private static void println(Object str) {
 		System.out.println(str);
 	}
 	public static void printRootLog(Object str) {
-		println("【RootLog】:"+str);
+		if(rootLogOn){
+			println("【RootLog】:"+str);
+		}
 	}
 
 	public static void printInitLog(String str) {
-//		println("【InitLog】:"+str);
+		if(initLogOn){
+			println("【InitLog】:"+str);
+		}
 
 	}
 
 	public static void printEvtLog(String str) {
-		println("【EvtLog】:"+str);
+		if(evtLogOn){
+			println("【EvtLog】:"+str);
+		}
 
 	}
 
 	public static void printAopLog(String str) {
-//		println("【AopLog】:"+str);
+		if(aopLogOn){
+			println("【AopLog】:"+str);
+		}
 	}
 	public static void printAsynLog(String str) {
-//		println("【AsynLog】:"+str);
+		if(asynLogOn){
+			println("【AsynLog】:"+str);
+		}
 	}
 	
 }

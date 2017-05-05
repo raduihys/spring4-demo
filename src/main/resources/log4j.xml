@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="【hysLog】【%C{1}.%M】 -----%m%n" />
+		</layout>
+	</appender>
+	<category name="com.hys.spring4demo" additivity="false">
+		<priority value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+	</category>
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</log4j:configuration>

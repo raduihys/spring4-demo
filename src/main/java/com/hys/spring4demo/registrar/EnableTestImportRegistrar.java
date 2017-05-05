@@ -19,7 +19,6 @@ class EnableTestImportRegistrar implements ImportBeanDefinitionRegistrar {
 		BeanDefinitionBuilder configPropertisBean=BeanDefinitionBuilder.genericBeanDefinition(PropertiesFactoryBean.class);
 		configPropertisBean.addPropertyValue("properties", oumsClientConfigProperties);
 		registry.registerBeanDefinition("xvtest", configPropertisBean.getBeanDefinition());
-		System.out.println("dddddddddddddd");
 
 	}
 

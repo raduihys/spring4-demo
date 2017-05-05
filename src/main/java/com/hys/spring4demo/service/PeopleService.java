@@ -1,8 +1,8 @@
 package com.hys.spring4demo.service;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
+import com.hys.spring4demo.TestLog;
 import com.hys.spring4demo.aop.annotation.MyComponent;
 import com.hys.spring4demo.aop.annotation.TestAnnotation;
 
@@ -17,6 +17,6 @@ public class PeopleService {
 
 	@TestAnnotation
 	public void showPeople() {
-		System.out.println(people.getName()+"->");
+		TestLog.printRootLog(people.getName()+"->");
 	}
 }
