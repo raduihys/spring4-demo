@@ -14,5 +14,6 @@ public class MybatisTestService {
 	public void sqlTest() {
 		testMapper.deleteAll();
 		testMapper.insert(1,11,"str11");
+
 	}
 }

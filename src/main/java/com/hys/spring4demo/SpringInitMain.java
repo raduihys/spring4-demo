@@ -2,14 +2,13 @@ package com.hys.spring4demo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.hys.spring4demo.service.PeopleService;
+import com.hys.spring4demo.asyn.AsynTest;
 
 public class SpringInitMain {
 	public static void main(String[] args) throws Exception {
-		TestLog.setRootLogOn();
-		TestLog.setAopLogOn();
+		TestLog.setAsynLogOn();
 		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CoreConfig.class)) {
-			ctx.getBean(PeopleService.class).showPeople();
+			ctx.getBean(AsynTest.class).synMethod1();
 		}
 	}
 }
