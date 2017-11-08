@@ -1,14 +1,16 @@
 package com.hys.spring4demo;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import com.hys.spring4demo.asyn.AsynTest;
 
-import com.hys.spring4demo.service.PeopleService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringInitMain {
 	public static void main(String[] args) throws Exception {
-		TestLog.setAopLogOn();
+		TestLog.setAsynLogOn();
 		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CoreConfig.class)) {
-			ctx.getBean(PeopleService.class).showPeople();
+		    System.out.println("==================");
+			ctx.getBean(AsynTest.class).asynMethod1();
+			System.out.println("111111111111111");
 		}
 	}
 }
