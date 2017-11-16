@@ -9,7 +9,7 @@ public class SpringInitMain {
 		TestLog.setAsynLogOn();
 		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CoreConfig.class)) {
 		    System.out.println("==================");
-			ctx.getBean(AsynTest.class).asynMethod1();
+			System.out.println(ctx.getBean(AsynTest.class).asynMethod1());
 			System.out.println("111111111111111");
 		}
 	}
