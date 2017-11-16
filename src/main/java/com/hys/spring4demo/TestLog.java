@@ -23,7 +23,7 @@ public class TestLog {
 		TestLog.asynLogOn = true;
 	}
 	private static void println(Object str) {
-		System.out.println(str);
+		System.out.println("【"+Thread.currentThread().getName()+"】:"+str);
 	}
 	public static void printRootLog(Object str) {
 		if(rootLogOn){
